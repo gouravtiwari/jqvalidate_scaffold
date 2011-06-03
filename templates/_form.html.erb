@@ -14,7 +14,7 @@
 <% for attribute in attributes -%>
   <div class="field">
     <%%= f.label :<%= attribute.name %> %><br />
-    <%%= f.<%= attribute.field_type %> :<%= attribute.name %> %>
+    <%%= f.<%= attribute.field_type %> :<%= attribute.name %>, :class => 'required'  %>
   </div>
 <% end -%>
   <div class="actions">

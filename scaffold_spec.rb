@@ -20,7 +20,6 @@ Scaffoldhub::Specification.new do
     tag 'jquery-validate'
 
     # Optionally specify an example of a scaffold parameter
-    parameter_example 'FIELD_NAME'
 
     # Optionally post a link to an article you write explaining how the scaffold works.
     blog_post 'http://docs.jquery.com/Plugins/validation'
@@ -55,7 +54,7 @@ Scaffoldhub::Specification.new do
   file 'templates/jquery/custom_validate.css', :dest => 'public/stylesheets/custom_validate'
 
   with_options :src => 'templates/jquery', :dest => 'public/javascripts' do
-    file 'jquery-1.6.1.js'
+    file 'jquery-1.6.1.min.js'
     file 'jquery.validate.min.js'
   end
   # Other keywords available are:

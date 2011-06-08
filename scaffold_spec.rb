@@ -57,16 +57,15 @@ Scaffoldhub::Specification.new do
     file 'jquery-1.6.1.min.js'
     file 'jquery.validate.min.js'
   end
-  # Other keywords available are:
 
-  # Define any other generic template - this ERB file will be used to generate
-  # a new file - the dest option is required to indicate where to put the new file
-  # template 'xyz.html.erb', :dest => 'path/to/xyz.html'
+  post_install_message <<MESSAGE
+Follow these steps to use the JQuery validate plugin in your
+new scaffold:
+- Run "rake db:migrate" to create your new PLURAL_NAME database table
+- Run your Rails server
+- Open http://localhost:3000/PLURAL_NAME
+... to see the index page. Now when you create a new record or update existing pne you will
+notice that default validation like *required will work and will not allow you to submit.
+MESSAGE
 
-  # Copy any file without running an ERB transformation
-  # file 'xyz.html', :dest => 'path/to/xyz.html'
-
-  # Add a gem to the Gemfile
-  # gem 'some_gem', '1.0'
-  # gem "some_other_gem", :group => :test, :git => "git://github.com/rails/rails"
 end
